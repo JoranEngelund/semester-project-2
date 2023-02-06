@@ -1,0 +1,52 @@
+{
+  "name": "semester-project-2",
+  "version": "0.1.0",
+  "description": "Semester project 2 developing an IT auction house, utilizing HTML, CSS, SCSS, Bootstrap and JavaScript",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoranEngelund/semester-project-2.git"
+  },
+  "keywords": [
+    "semester-project",
+    "semester",
+    "project",
+    "auction",
+    "house",
+    "IT",
+    "BIDIT",
+    "javascript",
+    "css",
+    "scss",
+    "html",
+    "Noroff"
+  ],
+  "author": "Joran Engelund <joranengelund@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoranEngelund/semester-project-2/issues"
+  },
+  "homepage": "https://github.com/JoranEngelund/semester-project-2#readme",
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
+  }
+}

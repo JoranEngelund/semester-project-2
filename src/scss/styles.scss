@@ -1,0 +1,42 @@
+// Custom scss
+@import "../../node_modules/bootstrap/scss/functions";
+@import "./partials/nav";
+@import "./partials/btn";
+@import "./partials/card";
+@import "./partials/variables";
+
+// Original Bootstrap scss files
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.img-logo {
+  max-width: 60%;
+}
+
+footer a,
+.card a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Catamaran", sans-serif;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: $dark;
+}
+
+.icon-custom {
+  aspect-ratio: 3;
+}
+
+.card-width {
+  width: 97vw;
+}
+
+.custom-title {
+  font-size: 1.2rem;
+}

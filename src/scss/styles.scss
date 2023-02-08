@@ -19,7 +19,8 @@ footer a,
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Catamaran", sans-serif;
 }
 
@@ -34,4 +35,8 @@ body {
 
 .card-width {
   width: 97vw;
+}
+
+.custom-title {
+  font-size: 1.2rem;
 }

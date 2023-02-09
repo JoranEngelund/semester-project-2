@@ -40,3 +40,8 @@ body {
 .custom-title {
   font-size: 1.2rem;
 }
+
+.form-control {
+  background-color: $secondary;
+  box-shadow: $inset-box-shadow;
+}

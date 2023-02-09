@@ -25,6 +25,8 @@
     "css",
     "scss",
     "html",
+    "bootstrap",
+    "sass",
     "Noroff"
   ],
   "author": "Joran Engelund <joranengelund@hotmail.com>",

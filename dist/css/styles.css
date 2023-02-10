@@ -13332,6 +13332,18 @@ body {
 
 .form-control {
   background-color: #f5f6f7;
+  width: 100%;
+  max-width: 17rem;
+  border: none;
+  border-radius: 0.2rem;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.form-control:focus {
+  background-color: #f5f6f7;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.form-control.post-input {
+  max-width: 19rem;
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 

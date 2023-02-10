@@ -43,5 +43,19 @@ body {
 
 .form-control {
   background-color: $secondary;
+  width: 100%;
+  max-width: 17rem;
+  border: none;
+  border-radius: 0.2rem;
   box-shadow: $inset-box-shadow;
+
+  &:focus {
+    background-color: $secondary;
+    box-shadow: $inset-box-shadow;
+  }
+
+  &.post-input {
+    max-width: 19rem;
+    box-shadow: $inset-box-shadow;
+  }
 }

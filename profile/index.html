@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="View profile info, your listings, bids and wins! Add new items for auctions. Edit your avatar. Bid smarter, not harder, with BIDIT"
+    />
+    <meta
+      name="keywords"
+      content="Browse, account, bid, auction, wins, bids, avatar, house, online, bidding, bid, biddit, profile, sell, buy, listings"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <title>Profile | BIDIT</title>
+  </head>
+  <body class="bg-secondary d-flex flex-column min-vh-100">
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-md shadow bg-light">
+        <div class="container-fluid">
+          <a href="/home/index.html" class="navbar-brand"
+            ><img src="/assets/Logo.svg" alt="logo of BIDIT" class="img-logo"
+          /></a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  href="/home/index.html"
+                  class="nav-link rounded py-1 px-3 mx-2"
+                  >Auction</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link active rounded py-1 px-3 mx-2"
+                  >Profile</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link rounded py-1 px-3 mx-2"
+                  >Logout</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link bg-primary text-light rounded py-1 px-3 mx-2 shadow"
+                  >Credits: 1000</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 my-4">
+              <div
+                class="d-flex flex-column justify-content-center align-items-center text-center gap-3"
+              >
+                <img
+                  src="/assets/profile-image.png"
+                  alt="Profile Avatar"
+                  class="card-img"
+                />
+                <div class="">
+                  <h1 class="card-title">Username</h1>
+                  <h2>Email@noroff.no</h2>
+                  <h3><span class="fw-bold">Credits:</span> 1000</h3>
+                </div>
+
+                <div>
+                  <button
+                    data-bs-toggle="modal"
+                    data-bs-target="#update-avatar"
+                    class="btn btn-primary shadow"
+                  >
+                    Edit Avatar
+                  </button>
+                  <button
+                    data-bs-toggle="modal"
+                    data-bs-target="#create-listing"
+                    class="btn btn-primary shadow"
+                  >
+                    Add New Listing
+                  </button>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="col-sm-12 col-md-12 col-lg-4 mb-3">
+              <div class="card rounded shadow">
+                <h2 class="card-title m-3">My wins: 3</h2>
+                <div class="card-body">
+                  <div
+                    class="card mb-3 h-100 bg-primary text-light shadow rounded"
+                  >
+                    <img
+                      class="card-img-top mb-1 rounded-top"
+                      src="/assets/pexels-lukas-574069.jpg"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title fw-bold my-2">Slightly used mac</h3>
+                    </div>
+                    <hr />
+                    <div
+                      class="card-footer bg-primary d-flex flex-column justify-content-between mb-2"
+                    >
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Created:</span> Feb 01
+                        </h4>
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Ends at:</span> Feb 13
+                        </h4>
+                      </div>
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <p class="mb-auto">
+                          <span class="fw-bold">Bids:</span> 3
+                        </p>
+                        <button class="btn btn-light shadow px-5 py-1">
+                          View Item
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="card mb-3 h-100 bg-primary text-light shadow rounded"
+                  >
+                    <img
+                      class="card-img-top mb-1 rounded-top"
+                      src="/assets/pexels-lukas-574069.jpg"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title fw-bold my-2">Slightly used mac</h3>
+                    </div>
+                    <hr />
+                    <div
+                      class="card-footer bg-primary d-flex flex-column justify-content-between mb-2"
+                    >
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Created:</span> Feb 01
+                        </h4>
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Ends at:</span> Feb 13
+                        </h4>
+                      </div>
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <p class="mb-auto">
+                          <span class="fw-bold">Bids:</span> 3
+                        </p>
+                        <button class="btn btn-light shadow px-5 py-1">
+                          View Item
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="card mb-3 h-100 bg-primary text-light shadow rounded"
+                  >
+                    <img
+                      class="card-img-top mb-1 rounded-top"
+                      src="/assets/pexels-lukas-574069.jpg"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title fw-bold my-2">Slightly used mac</h3>
+                    </div>
+                    <hr />
+                    <div
+                      class="card-footer bg-primary d-flex flex-column justify-content-between mb-2"
+                    >
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Created:</span> Feb 01
+                        </h4>
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Ends at:</span> Feb 13
+                        </h4>
+                      </div>
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <p class="mb-auto">
+                          <span class="fw-bold">Bids:</span> 3
+                        </p>
+                        <button class="btn btn-light shadow px-5 py-1">
+                          View Item
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="card rounded shadow">
+                <h2 class="card-title m-3">My Bids</h2>
+                <div class="card-body">
+                  <div
+                    class="card mb-3 h-100 bg-primary text-light shadow rounded"
+                  >
+                    <img
+                      class="card-img-top mb-1 rounded-top"
+                      src="/assets/pexels-lukas-574069.jpg"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title fw-bold my-2">Slightly used mac</h3>
+                    </div>
+                    <hr />
+                    <div
+                      class="card-footer bg-primary d-flex flex-column justify-content-between mb-2"
+                    >
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Created:</span> Feb 01
+                        </h4>
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Ends at:</span> Feb 13
+                        </h4>
+                      </div>
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <p class="mb-auto">
+                          <span class="fw-bold">Bids:</span> 3
+                        </p>
+                        <button class="btn btn-light shadow px-5 py-1">
+                          View Item
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="card mb-3 h-100 bg-primary text-light shadow rounded"
+                  >
+                    <img
+                      class="card-img-top mb-1 rounded-top"
+                      src="/assets/pexels-lukas-574069.jpg"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title fw-bold my-2">Slightly used mac</h3>
+                    </div>
+                    <hr />
+                    <div
+                      class="card-footer bg-primary d-flex flex-column justify-content-between mb-2"
+                    >
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Created:</span> Feb 01
+                        </h4>
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Ends at:</span> Feb 13
+                        </h4>
+                      </div>
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <p class="mb-auto">
+                          <span class="fw-bold">Bids:</span> 3
+                        </p>
+                        <button class="btn btn-light shadow px-5 py-1">
+                          View Item
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="card mb-3 h-100 bg-primary text-light shadow rounded"
+                  >
+                    <img
+                      class="card-img-top mb-1 rounded-top"
+                      src="/assets/pexels-lukas-574069.jpg"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title fw-bold my-2">Slightly used mac</h3>
+                    </div>
+                    <hr />
+                    <div
+                      class="card-footer bg-primary d-flex flex-column justify-content-between mb-2"
+                    >
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Created:</span> Feb 01
+                        </h4>
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Ends at:</span> Feb 13
+                        </h4>
+                      </div>
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <p class="mb-auto">
+                          <span class="fw-bold">Bids:</span> 3
+                        </p>
+                        <button class="btn btn-light shadow px-5 py-1">
+                          View Item
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="card rounded shadow">
+                <h2 class="card-title m-3">My Listings</h2>
+                <div class="card-body">
+                  <div
+                    class="card mb-3 h-100 bg-primary text-light shadow rounded"
+                  >
+                    <img
+                      class="card-img-top mb-1 rounded-top"
+                      src="/assets/pexels-lukas-574069.jpg"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title fw-bold my-2">Slightly used mac</h3>
+                    </div>
+                    <hr />
+                    <div
+                      class="card-footer bg-primary d-flex flex-column justify-content-between mb-2"
+                    >
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Created:</span> Feb 01
+                        </h4>
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Ends at:</span> Feb 13
+                        </h4>
+                      </div>
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <p class="mb-auto">
+                          <span class="fw-bold">Bids:</span> 3
+                        </p>
+                        <button class="btn btn-light shadow px-5 py-1">
+                          View Item
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="card mb-3 h-100 bg-primary text-light shadow rounded"
+                  >
+                    <img
+                      class="card-img-top mb-1 rounded-top"
+                      src="/assets/pexels-lukas-574069.jpg"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title fw-bold my-2">Slightly used mac</h3>
+                    </div>
+                    <hr />
+                    <div
+                      class="card-footer bg-primary d-flex flex-column justify-content-between mb-2"
+                    >
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Created:</span> Feb 01
+                        </h4>
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Ends at:</span> Feb 13
+                        </h4>
+                      </div>
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <p class="mb-auto">
+                          <span class="fw-bold">Bids:</span> 3
+                        </p>
+                        <button class="btn btn-light shadow px-5 py-1">
+                          View Item
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="card mb-3 h-100 bg-primary text-light shadow rounded"
+                  >
+                    <img
+                      class="card-img-top mb-1 rounded-top"
+                      src="/assets/pexels-lukas-574069.jpg"
+                    />
+                    <div class="card-body">
+                      <h3 class="card-title fw-bold my-2">Slightly used mac</h3>
+                    </div>
+                    <hr />
+                    <div
+                      class="card-footer bg-primary d-flex flex-column justify-content-between mb-2"
+                    >
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Created:</span> Feb 01
+                        </h4>
+                        <h4 class="card-title custom-title">
+                          <span class="fw-bold">Ends at:</span> Feb 13
+                        </h4>
+                      </div>
+                      <div
+                        class="d-flex flex-row justify-content-between align-items-end my-2"
+                      >
+                        <p class="mb-auto">
+                          <span class="fw-bold">Bids:</span> 3
+                        </p>
+                        <button class="btn btn-light shadow px-5 py-1">
+                          View Item
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="create-listing-modal">
+        <div
+          class="modal fade"
+          id="create-listing"
+          tabindex="-1"
+          aria-labelledby="create-listing"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content bg-secondary">
+              <div class="d-flex mx-3 mt-3 d-flex justify-content-end">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div
+                class="modal-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <div>
+                  <img
+                    class="bg-primary rounded-circle p-3"
+                    src="/assets/Icon awesome-hand-holding-usd.svg"
+                    alt="dollar icon"
+                  />
+                </div>
+                <h2 class="my-4">Add New Listing</h2>
+                <form
+                  action="../home/index.html"
+                  method="POST"
+                  id="reg-form"
+                  class="text-start d-flex flex-column align-items-center mt-2"
+                >
+                  <div class="mb-3 mx-6">
+                    <label for="title" class="form-label">Title *</label>
+                    <input
+                      name="title"
+                      type="text"
+                      id="title"
+                      class="form-control"
+                      placeholder="Title"
+                      maxlength="280"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3 mx-6">
+                    <label for="description" class="form-label"
+                      >Description</label
+                    >
+                    <textarea
+                      name="description"
+                      id="description"
+                      class="form-control post-input mb-3"
+                      placeholder="Description"
+                    ></textarea>
+                  </div>
+                  <div class="mb-3 mx-6">
+                    <label for="date" class="form-label">Ends at *</label>
+                    <input
+                      type="datetime-local"
+                      id="date"
+                      name="date"
+                      class="form-control mb-3"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3 mx-6">
+                    <label for="media" class="form-label">Media Gallery</label>
+                    <input
+                      type="url"
+                      id="media"
+                      name="media-1"
+                      class="form-control mb-3"
+                      placeholder="URL 1"
+                    />
+                    <input
+                      type="url"
+                      id="media"
+                      name="media-2"
+                      class="form-control my-3"
+                      placeholder="URL 2"
+                    />
+                    <input
+                      type="url"
+                      id="media"
+                      name="media-3"
+                      class="form-control my-3"
+                      placeholder="URL 3"
+                    />
+                  </div>
+                  <div class="mb-3 mx-6">
+                    <label for="tags" class="form-label">Tags</label>
+                    <input
+                      name="tags"
+                      type="text"
+                      id="tags"
+                      class="form-control"
+                      placeholder="Tag1,Tag2"
+                      pattern="^[a-zA-Z0-9]+(?:[,]+[a-zA-Z0-9]+){0,5}$"
+                      title="Tags needs to be separated with comma, no spaces between. Maximum 5 tags | Example: Tag1,Tag2,Tag3,Tag4,Tag5"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary rounded shadow text-light py-2 px-4"
+                  >
+                    List It
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="update-avatar-media">
+        <div
+          class="modal fade"
+          id="update-avatar"
+          tabindex="-1"
+          aria-labelledby="update-avatar"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content bg-secondary">
+              <div class="d-flex mx-3 mt-3 d-flex justify-content-end">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body d-flex justify-content-center">
+                <form id="update-profile-media">
+                  <div class="mb-3">
+                    <h2 class="form-label text-left custom-label mb-5">
+                      Update Profile Avatar
+                    </h2>
+                    <div>
+                      <div class="mb-3">
+                        <label for="update-media" class="form-label"
+                          >Avatar</label
+                        >
+                        <input
+                          name="avatar"
+                          type="url"
+                          id="update-avatar"
+                          class="form-control post-input shadow"
+                          placeholder="Avatar must be a URL"
+                          title="Avatar must be a fully formed URL that links to a live and publicly accessible image."
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-primary mt-4 mb-3 mx-3 px-6 text-center btn-custom shadow"
+                  >
+                    Save changes
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-primary mt-auto text-center text-light p-3">
+      <a
+        target="_blank"
+        href="https://joranengelund.github.io/"
+        class="nav-item text-light"
+        >Copyright © 2023 Jøran Engelund</a
+      >
+    </footer>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

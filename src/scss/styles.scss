@@ -59,3 +59,10 @@ body {
     box-shadow: $inset-box-shadow;
   }
 }
+
+.card-img {
+  max-width: 20%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}

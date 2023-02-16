@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse, Search, Filter and Sort on auction listings. Add new items for auctions. Bid smarter, not harder, with BIDIT"
+    />
+    <meta
+      name="keywords"
+      content="Browse, account, bid, auction, house, online, bidding, bid, biddit, listing, search, filter, sort, sell, buy"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <title>Auction | BIDIT</title>
+  </head>
+  <body class="bg-secondary d-flex flex-column min-vh-100">
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-md shadow bg-light">
+        <div class="container-fluid">
+          <a href="/home/index.html" class="navbar-brand"
+            ><img src="/assets/Logo.svg" alt="logo of BIDIT" class="img-logo"
+          /></a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  href="/home/index.html"
+                  class="nav-link rounded py-1 px-3 mx-2"
+                  >Auction</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="/profile/index.html"
+                  class="nav-link rounded py-1 px-3 mx-2"
+                  >Profile</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link rounded py-1 px-3 mx-2"
+                  >Logout</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link bg-primary text-light rounded py-1 px-3 mx-2 shadow"
+                  >Credits: 1000</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="container-fluid">
+          <div class="row mt-6">
+            <div
+              class="col-md-6 col-sm-12 d-flex align-items-center flex-column"
+            >
+              <div class="card rounded bg-light shadow">
+                <div
+                  id="gallery-carousel"
+                  class="carousel slide"
+                  data-bs-ride="true"
+                >
+                  <div class="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#gallery-carousel"
+                      data-bs-slide-to="0"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#gallery-carousel"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#gallery-carousel"
+                      data-bs-slide-to="2"
+                      aria-label="Slide 3"
+                    ></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="/assets/pexels-lukas-574069.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="/assets/pexels-lukas-574069.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="/assets/pexels-lukas-574069.jpg"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#gallery-carousel"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#gallery-carousel"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title mt-3">Slightly used mac</h1>
+                  <hr />
+                  <h2 class="card-subtitle">Description</h2>
+                  <p class="card-text my-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Velit placeat nobis dolore, libero consequuntur magni
+                    nesciunt beatae aut maxime esse ipsa, voluptate aliquid
+                    dignissimos facere quo facilis ipsam illo quidem?
+                  </p>
+                </div>
+              </div>
+              <button class="btn btn-primary shadow my-3 px-7">
+                See Other Listings
+              </button>
+            </div>
+            <div class="col-md-6 col-sm-12 mb-3">
+              <div class="card bg-light shadow rounded p-3">
+                <h2 class="card-title my-3">Added by</h2>
+                <div class="d-flex align-items-center mb-3">
+                  <img
+                    src="/assets/profile-image.png"
+                    alt=""
+                    class="card-img"
+                  />
+                  <h3 class="card-subtitle ms-3">John Doe</h3>
+                </div>
+                <h4 class="card-subtitle mb-3">
+                  <span class="fw-bold">Ends at: </span>13 feb
+                </h4>
+                <h4 class="card-subtitle mb-3">
+                  <span class="fw-bold">Highest bid: </span>100
+                </h4>
+                <div
+                  class="d-flex justify-content-between align-items-end mb-3"
+                >
+                  <label for="bid" class="card-subtitle fs-4 fw-bold"
+                    >Your Bid:
+                  </label>
+                  <form method="POST" action="">
+                    <input
+                      class="form-control"
+                      name="bid"
+                      id="bid"
+                      type="number"
+                      placeholder="100"
+                    />
+                  </form>
+                </div>
+                <button type="submit" class="btn btn-primary shadow">
+                  Bid It
+                </button>
+                <hr />
+                <h3 class="card-subtitle my-3">Bid History</h3>
+                <div
+                  id="bidder"
+                  class="d-flex flex-row justify-content-between align-items-center border rounded shadow bg-secondary p-3 mb-2"
+                >
+                  <h4 class="card-subtitle">John Smith</h4>
+                  <h5 class="card-subtitle border rounded py-2 px-3 bg-light">
+                    250
+                  </h5>
+                </div>
+                <div
+                  id="bidder"
+                  class="d-flex flex-row justify-content-between align-items-center border rounded shadow bg-secondary p-3 mb-2"
+                >
+                  <h4 class="card-subtitle">John Smith</h4>
+                  <h5 class="card-subtitle border rounded py-2 px-3 bg-light">
+                    250
+                  </h5>
+                </div>
+                <div
+                  id="bidder"
+                  class="d-flex flex-row justify-content-between align-items-center border rounded shadow bg-secondary p-3 mb-2"
+                >
+                  <h4 class="card-subtitle">John Smith</h4>
+                  <h5 class="card-subtitle border rounded py-2 px-3 bg-light">
+                    250
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-primary mt-auto text-center text-light p-3">
+      <a
+        target="_blank"
+        href="https://joranengelund.github.io/"
+        class="nav-item text-light"
+        >Copyright © 2023 Jøran Engelund</a
+      >
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

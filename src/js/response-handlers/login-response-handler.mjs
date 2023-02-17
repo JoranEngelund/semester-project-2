@@ -1,15 +1,18 @@
 import * as storage from "../storage/index.mjs";
 
 /**
- * // Function that checks whether a http request returned a false or true response, and then displayes either validation message og error message based on the return value from the request
+ * // Function that checks whether a http request returned a false or true response, and then displayes either validation message or error message based on the return value from the request
  * @param {object} response // Checks if there were any false returns from the ok property in the http request
  * @example
  * ```
  * // Call the function and pass in the the response object from a fetch call
- * registrationError(response);
+ * loginResponseHandler(response);
  * ```
  */
-export function loginError(response) {
+export function loginResponseHandler(response) {
+  if (response.ok) {
+    window.location.replace("../../../home/index.html");
+  }
   if (!response.ok) {
     storage.clear();
     const loginCard = document.querySelector("#login-card");
@@ -30,7 +33,5 @@ export function loginError(response) {
                                       Create an account
                                     </a>
                                   `;
-  } else if (response.ok) {
-    window.location.replace("../../../home/index.html");
   }
 }

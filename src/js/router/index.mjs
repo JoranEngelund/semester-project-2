@@ -12,5 +12,7 @@ export function router() {
 
   if (path === "/authorization/login/index.html") {
     run.loginHandler();
+  } else if (path === "/authorization/registration/index.html") {
+    run.registrationHandler();
   }
 }

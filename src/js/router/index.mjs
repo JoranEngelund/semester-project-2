@@ -12,7 +12,17 @@ export function router() {
 
   if (path === "/authorization/login/index.html") {
     run.loginHandler();
-  } else if (path === "/authorization/registration/index.html") {
+  }
+  if (path === "/authorization/registration/index.html") {
     run.registrationHandler();
+  }
+  if (path === "/home/index.html") {
+    run.logout();
+  }
+  if (path === "/profile/index.html") {
+    run.logout();
+  }
+  if (path === "/home/auction/index.html") {
+    run.logout();
   }
 }

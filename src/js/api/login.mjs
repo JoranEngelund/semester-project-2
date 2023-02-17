@@ -1,16 +1,16 @@
 import * as storage from "../storage/index.mjs";
-import * as check from "../error-handlers/loginError.mjs";
+import * as check from "../response-handlers/login-response-handler.mjs";
 
 /**
  * // Async fetch function that sends a HTTP POST request to the API server,
  *  with an object of the properties of a user that wants to log in.
- * @param {string} url // url path to send the POST request to
+ * @param {string} url // API url endpoint to send the POST request to
  * @param {object} user // object of the user values that needs to be logged in
  * @param {string} method  // HTTP method request
  * @example
  * ```
- * // Call the function
- * login(url, user, POST)
+ * // Call the function and pass in the arguments required
+ * login(url, profile, POST)
  * ```
  */
 export async function login(url, profile, method) {
@@ -27,7 +27,7 @@ export async function login(url, profile, method) {
     const { accessToken, ...user } = json;
     storage.save("accessToken", accessToken);
     storage.save("user", user);
-    check.loginError(response);
+    check.loginResponseHandler(response);
   } catch (error) {
     throw new Error(error);
   }

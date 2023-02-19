@@ -1,11 +1,12 @@
 /**
- * // Function that checks whether a http request returned a false or true response, and then displayes either validation message og error message based on the return value from the request
- * @param {object} response // Checks if there were any false returns from the ok property in the http request
+ * Handles the response of a registration request.
+ * @param {Response} response - The response object returned from the registration request.
+ * @returns {void}
  * @example
- * ```
- * // Call the function and pass in the the response object from a fetch call
  * registrationResponseHandler(response);
- * ```
+ * @description
+ * - If the response is ok, clears the registration form and displays a success message with a login button.
+ * - If the response is not ok, displays an error message with a button to retry the registration process.
  */
 export function registrationResponseHandler(response) {
   if (response.ok) {

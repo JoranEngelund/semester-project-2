@@ -1,5 +1,5 @@
 import { API_LOGIN_URL } from "../constants/constants.mjs";
-import { login } from "../api/login.mjs";
+import { login } from "../api/index.mjs";
 
 /**
  * // loginHandler function that retrieves data from a login-form, creates an object from input values, and passes it into a async function that sends the object to the API server with a method request

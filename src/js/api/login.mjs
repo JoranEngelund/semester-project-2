@@ -1,17 +1,16 @@
 import * as storage from "../storage/index.mjs";
-import * as check from "../response-handlers/login-response-handler.mjs";
+import * as check from "../response-handlers/index.mjs";
 
 /**
- * // Async fetch function that sends a HTTP POST request to the API server,
- *  with an object of the properties of a user that wants to log in.
- * @param {string} url // API url endpoint to send the POST request to
- * @param {object} user // object of the user values that needs to be logged in
- * @param {string} method  // HTTP method request
+ * Makes a request to log in a user, saves their user and access token in local storage,
+ * and calls the loginResponseHandler function to handle the server response.
+ * @async
+ * @param {string} url - The URL to which the login request is sent.
+ * @param {Object} profile - The user's login credentials.
+ * @param {string} method - The HTTP method for the request.
+ * @throws {Error} If there was an error while fetching or parsing the response.
  * @example
- * ```
- * // Call the function and pass in the arguments required
- * login(url, profile, POST)
- * ```
+ * login(url, profile, method);
  */
 export async function login(url, profile, method) {
   try {

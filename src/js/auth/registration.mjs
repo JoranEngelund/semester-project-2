@@ -1,4 +1,4 @@
-import { registration } from "../api/registration.mjs";
+import { registration } from "../api/index.mjs";
 import { API_REGISTRATION_URL } from "../constants/constants.mjs";
 
 export function registrationHandler() {

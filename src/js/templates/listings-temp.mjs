@@ -1,3 +1,5 @@
+import { placeholderImg } from "../error-handlers/onerror.mjs";
+
 /**
  * Renders listings to the page using the provided data
  * @function listingsTemplate
@@ -37,7 +39,7 @@ export function listingsTemplate(
                         >
                           <img
                             class="card-img-top mb-1 rounded-top"
-                            src="" alt=""
+                            src="" alt="" onerror="this.onerror=null;this.src='${placeholderImg}';"
                           />
                           <div class="card-body">
                             <h3 class="card-title fw-bold my-2 listing-title">

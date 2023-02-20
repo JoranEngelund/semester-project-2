@@ -29,4 +29,7 @@ export function router() {
   if (path === "/home/auction/index.html") {
     check.logout();
   }
+  if (path === "/home/index.html") {
+    run.setup();
+  }
 }

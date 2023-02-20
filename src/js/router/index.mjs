@@ -13,6 +13,7 @@ export function router() {
 
   if (path === "/" || path === "/index.html") {
     run.setup();
+    check.checkAuthorization();
   }
   if (path === "/authorization/login/index.html") {
     check.loginHandler();
@@ -21,15 +22,16 @@ export function router() {
     check.registrationHandler();
   }
   if (path === "/home/index.html") {
+    run.setup();
     check.logout();
+    check.checkAuthorization();
   }
   if (path === "/profile/index.html") {
     check.logout();
+    check.checkAuthorization();
   }
   if (path === "/home/auction/index.html") {
     check.logout();
-  }
-  if (path === "/home/index.html") {
-    run.setup();
+    check.checkAuthorization();
   }
 }

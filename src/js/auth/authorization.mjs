@@ -15,7 +15,11 @@ import * as storage from "../storage/index.mjs";
 export function checkAuthorization() {
   const path = window.location.pathname;
   const token = storage.load("accessToken");
-  if (!token) {
+  if (!token && path === "/home/index.html") {
+    window.location.replace("/authorization/login/index.html");
+  } else if (!token && path === "/home/auction/index.html") {
+    window.location.replace("/authorization/login/index.html");
+  } else if (!token && path === "/profile/index.html") {
     window.location.replace("/authorization/login/index.html");
   }
   if ((path === "/" || path === "/index.html") && token) {

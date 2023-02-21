@@ -72,8 +72,12 @@ export function listingsTemplate(
                             </div>
                           </div>
                         </div>`;
-
-  div.querySelector("img").src = media;
+  /*
+  media.forEach((image) => {
+    div.querySelector("img").src = image;
+  });
+  */
+  div.querySelector("img").src = media[0];
   div.querySelector(".listing-title").innerText = title;
   div.querySelector(".listing-description").innerText = description;
   div.querySelector(".listing-created").innerText = `Created: ${createdDate}`;

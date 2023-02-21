@@ -1,6 +1,7 @@
 import * as check from "../auth/index.mjs";
 import * as run from "../auction/index.mjs";
-
+import * as upload from "../form-handlers/index.mjs";
+import * as write from "../templates/index.mjs";
 /**
  * Function that checks which page the user is on and then runs the functions that is needed on that page
  * @example
@@ -23,6 +24,8 @@ export function router() {
   }
   if (path === "/home/index.html") {
     run.setup();
+    write.welcomeMessage();
+    upload.createListing();
     check.logout();
     check.checkAuthorization();
   }

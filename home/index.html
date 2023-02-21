@@ -81,9 +81,9 @@
       <section>
         <div class="container-fluid">
           <div class="row">
-            <div class="col d-flex flex-column justify-content-end mt-5">
-              <h2 class="text-dark">Welcome, User!</h2>
-            </div>
+            <div
+              class="col d-flex flex-column justify-content-end mt-5 welcome-msg"
+            ></div>
           </div>
         </div>
       </section>
@@ -155,149 +155,7 @@
                 </div>
                 <section id="auction-listing">
                   <div class="container-fluid">
-                    <div id="listing-container" class="row">
-                      <div
-                        class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 p-3"
-                      >
-                        <div
-                          class="card h-100 bg-primary text-light shadow rounded"
-                        >
-                          <img
-                            class="card-img-top mb-1 rounded-top"
-                            src="/assets/pexels-lukas-574069.jpg"
-                          />
-                          <div class="card-body">
-                            <h3 class="card-title fw-bold my-2">
-                              Slightly used mac
-                            </h3>
-                            <p class="card-text">
-                              But I must explain to you how all this mistaken
-                              idea of denouncing pleasure and praising pain was
-                              born and I will give you a complete account of the
-                              system.
-                            </p>
-                          </div>
-                          <hr />
-                          <div
-                            class="card-footer bg-primary d-flex flex-column justify-content-between mb-2"
-                          >
-                            <div
-                              class="d-flex flex-row justify-content-between align-items-end my-2"
-                            >
-                              <h4 class="card-title custom-title">
-                                <span class="fw-bold">Created:</span> Feb 01
-                              </h4>
-                              <h4 class="card-title custom-title">
-                                <span class="fw-bold">Ends at:</span> Feb 13
-                              </h4>
-                            </div>
-                            <div
-                              class="d-flex flex-row justify-content-between align-items-end my-2"
-                            >
-                              <p class="mb-auto">
-                                <span class="fw-bold">Bids:</span> 3
-                              </p>
-                              <button class="btn btn-light shadow px-5 py-1">
-                                Bid It
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 p-3"
-                      >
-                        <div
-                          class="card h-100 bg-primary text-light shadow rounded"
-                        >
-                          <img
-                            class="card-img-top mb-1 rounded-top"
-                            src="/assets/pexels-lukas-574069.jpg"
-                          />
-                          <div class="card-body">
-                            <h3 class="card-title fw-bold my-2">
-                              Slightly used mac
-                            </h3>
-                            <p class="card-text">
-                              But I must explain to you how all this mistaken
-                            </p>
-                          </div>
-                          <hr />
-                          <div
-                            class="card-footer bg-primary d-flex flex-column justify-content-between mb-2"
-                          >
-                            <div
-                              class="d-flex flex-row justify-content-between align-items-end my-2"
-                            >
-                              <h4 class="card-title custom-title">
-                                <span class="fw-bold">Created:</span> Feb 01
-                              </h4>
-                              <h4 class="card-title custom-title">
-                                <span class="fw-bold">Ends at:</span> Feb 13
-                              </h4>
-                            </div>
-                            <div
-                              class="d-flex flex-row justify-content-between align-items-end my-2"
-                            >
-                              <p class="mb-auto">
-                                <span class="fw-bold">Bids:</span> 3
-                              </p>
-                              <button class="btn btn-light shadow px-5 py-1">
-                                Bid It
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 p-3"
-                      >
-                        <div
-                          class="card h-100 bg-primary text-light shadow rounded"
-                        >
-                          <img
-                            class="card-img-top mb-1 rounded-top"
-                            src="/assets/pexels-lukas-574069.jpg"
-                          />
-                          <div class="card-body">
-                            <h3 class="card-title fw-bold my-2">
-                              Slightly used mac
-                            </h3>
-                            <p class="card-text">
-                              But I must explain to you how all this mistaken
-                              idea of denouncing pleasure and praising pain was
-                              born and I will give you a complete account of the
-                              system.
-                            </p>
-                          </div>
-                          <hr />
-                          <div
-                            class="card-footer bg-primary d-flex flex-column justify-content-between mb-2"
-                          >
-                            <div
-                              class="d-flex flex-row justify-content-between align-items-end my-2"
-                            >
-                              <h4 class="card-title custom-title">
-                                <span class="fw-bold">Created:</span> Feb 01
-                              </h4>
-                              <h4 class="card-title custom-title">
-                                <span class="fw-bold">Ends at:</span> Feb 13
-                              </h4>
-                            </div>
-                            <div
-                              class="d-flex flex-row justify-content-between align-items-end my-2"
-                            >
-                              <p class="mb-auto">
-                                <span class="fw-bold">Bids:</span> 3
-                              </p>
-                              <button class="btn btn-light shadow px-5 py-1">
-                                Bid It
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <div id="listing-container" class="row"></div>
                   </div>
                 </section>
               </div>
@@ -335,9 +193,8 @@
                 </div>
                 <h2 class="my-4">Add New Listing</h2>
                 <form
-                  action="../home/index.html"
                   method="POST"
-                  id="reg-form"
+                  id="listing-form"
                   class="text-start d-flex flex-column align-items-center mt-2"
                 >
                   <div class="mb-3 mx-6">
@@ -378,21 +235,21 @@
                     <input
                       type="url"
                       id="media"
-                      name="media-1"
+                      name="media1"
                       class="form-control mb-3"
                       placeholder="URL 1"
                     />
                     <input
                       type="url"
                       id="media"
-                      name="media-2"
+                      name="media2"
                       class="form-control my-3"
                       placeholder="URL 2"
                     />
                     <input
                       type="url"
                       id="media"
-                      name="media-3"
+                      name="media3"
                       class="form-control my-3"
                       placeholder="URL 3"
                     />

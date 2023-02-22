@@ -2,6 +2,7 @@ import * as check from "../auth/index.mjs";
 import * as run from "../auction/index.mjs";
 import * as upload from "../form-handlers/index.mjs";
 import * as write from "../templates/index.mjs";
+import * as download from "../profile/index.mjs";
 /**
  * Function that checks which page the user is on and then runs the functions that is needed on that page
  * @example
@@ -26,15 +27,18 @@ export function router() {
     run.setup();
     write.welcomeMessage();
     upload.createListing();
+    download.setupCredits();
     check.logout();
     check.checkAuthorization();
   }
   if (path === "/profile/index.html") {
     check.logout();
+    download.setupCredits();
     check.checkAuthorization();
   }
   if (path === "/home/auction/index.html") {
     check.logout();
+    download.setupCredits();
     check.checkAuthorization();
   }
 }

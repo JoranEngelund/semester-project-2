@@ -13354,4 +13354,9 @@ body {
   border-radius: 50%;
 }
 
+.gallery {
+  height: 75vh;
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=styles.css.map */

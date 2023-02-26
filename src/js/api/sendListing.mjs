@@ -20,6 +20,9 @@ export async function sendListing(url, item, method) {
       },
       body: JSON.stringify(item),
     });
+    if (response.ok) {
+      window.location.reload();
+    }
   } catch (error) {
     console.log(error);
     alert("The listing didn't get correctly created, please try again");

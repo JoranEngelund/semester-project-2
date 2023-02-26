@@ -1,4 +1,5 @@
-import { placeholderImg } from "../error-handlers/onerror.mjs";
+import { placeholderListingImg } from "../error-handlers/onerror.mjs";
+import { allListingsCountdown } from "./listings-countdown.mjs";
 
 /**
  * Renders listings to the page using the provided data
@@ -27,10 +28,9 @@ export function listingsTemplate(
   description,
   bids
 ) {
-  const createdDate = new Date(created).toLocaleDateString();
-  const endsAtDate = new Date(endsAt).toLocaleDateString();
   const listingsContainer = document.querySelector("#listing-container");
   const div = document.createElement("div");
+  allListingsCountdown(div, endsAt);
   div.className =
     "col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 p-3";
 
@@ -39,14 +39,12 @@ export function listingsTemplate(
                         >
                           <img
                             class="card-img-top mb-1 rounded-top"
-                            src="" alt="" onerror="this.onerror=null;this.src='${placeholderImg}';"
+                            src="" alt="" onerror="this.onerror=null;this.src='${placeholderListingImg}';"
                           />
                           <div class="card-body">
                             <h3 class="card-title fw-bold my-2 listing-title">
-                              
                             </h3>
                             <p class="card-text listing-description">
-                              
                             </p>
                           </div>
                           <hr />
@@ -56,8 +54,6 @@ export function listingsTemplate(
                             <div
                               class="d-flex flex-row justify-content-between align-items-end my-2"
                             >
-                              <h4 class="card-title custom-title fw-bold listing-created">
-                              </h4>
                               <h4 class="card-title fw-bold custom-title listing-ends">
                               </h4>
                             </div>
@@ -72,16 +68,10 @@ export function listingsTemplate(
                             </div>
                           </div>
                         </div>`;
-  /*
-  media.forEach((image) => {
-    div.querySelector("img").src = image;
-  });
-  */
+
   div.querySelector("img").src = media[0];
   div.querySelector(".listing-title").innerText = title;
   div.querySelector(".listing-description").innerText = description;
-  div.querySelector(".listing-created").innerText = `Created: ${createdDate}`;
-  div.querySelector(".listing-ends").innerText = `Ends: ${endsAtDate}`;
   div.querySelector(".listing-bids").innerText = `Bids: ${bids}`;
   div.querySelector("a").href = `/home/auction/index.html?id=${id}`;
 

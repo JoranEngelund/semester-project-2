@@ -107,29 +107,7 @@
                       aria-label="Slide 3"
                     ></button>
                   </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img
-                        src="/assets/pexels-lukas-574069.jpg"
-                        class="d-block w-100"
-                        alt="..."
-                      />
-                    </div>
-                    <div class="carousel-item">
-                      <img
-                        src="/assets/pexels-lukas-574069.jpg"
-                        class="d-block w-100"
-                        alt="..."
-                      />
-                    </div>
-                    <div class="carousel-item">
-                      <img
-                        src="/assets/pexels-lukas-574069.jpg"
-                        class="d-block w-100"
-                        alt="..."
-                      />
-                    </div>
-                  </div>
+                  <div class="carousel-inner"></div>
                   <button
                     class="carousel-control-prev"
                     type="button"
@@ -155,86 +133,51 @@
                     <span class="visually-hidden">Next</span>
                   </button>
                 </div>
-                <div class="card-body">
-                  <h1 class="card-title mt-3">Slightly used mac</h1>
-                  <hr />
-                  <h2 class="card-subtitle">Description</h2>
-                  <p class="card-text my-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Velit placeat nobis dolore, libero consequuntur magni
-                    nesciunt beatae aut maxime esse ipsa, voluptate aliquid
-                    dignissimos facere quo facilis ipsam illo quidem?
-                  </p>
-                </div>
+                <div class="card-body listing-details"></div>
               </div>
-              <button class="btn btn-primary shadow my-3 px-7">
+              <a
+                href="/home/index.html"
+                class="btn btn-primary shadow my-3 px-7"
+              >
                 See Other Listings
-              </button>
+              </a>
             </div>
             <div class="col-md-6 col-sm-12 mb-3">
               <div class="card bg-light shadow rounded p-3">
-                <h2 class="card-title my-3">Added by</h2>
-                <div class="d-flex align-items-center mb-3">
-                  <img
-                    src="/assets/profile-image.png"
-                    alt=""
-                    class="card-img"
-                  />
-                  <h3 class="card-subtitle ms-3">John Doe</h3>
-                </div>
-                <h4 class="card-subtitle mb-3">
-                  <span class="fw-bold">Ends at: </span>13 feb
-                </h4>
-                <h4 class="card-subtitle mb-3">
-                  <span class="fw-bold">Highest bid: </span>100
-                </h4>
-                <div
-                  class="d-flex justify-content-between align-items-end mb-3"
-                >
+                <div class="seller-details"></div>
+                <div class="d-flex justify-content-between mb-3 bid-container">
                   <label for="bid" class="card-subtitle fs-4 fw-bold"
                     >Your Bid:
                   </label>
-                  <form method="POST" action="">
+                  <form
+                    method="POST"
+                    action=""
+                    id="bid-form"
+                    class="d-flex flex-column"
+                  >
                     <input
                       class="form-control"
                       name="bid"
                       id="bid"
                       type="number"
+                      max="1000"
                       placeholder="100"
+                      required
                     />
+                    <button
+                      type="submit"
+                      class="btn btn-primary shadow bid-btn mt-2"
+                    >
+                      Bid It
+                    </button>
                   </form>
                 </div>
-                <button type="submit" class="btn btn-primary shadow">
-                  Bid It
-                </button>
-                <hr />
-                <h3 class="card-subtitle my-3">Bid History</h3>
-                <div
-                  id="bidder"
-                  class="d-flex flex-row justify-content-between align-items-center border rounded shadow bg-secondary p-3 mb-2"
-                >
-                  <h4 class="card-subtitle">John Smith</h4>
-                  <h5 class="card-subtitle border rounded py-2 px-3 bg-light">
-                    250
-                  </h5>
-                </div>
-                <div
-                  id="bidder"
-                  class="d-flex flex-row justify-content-between align-items-center border rounded shadow bg-secondary p-3 mb-2"
-                >
-                  <h4 class="card-subtitle">John Smith</h4>
-                  <h5 class="card-subtitle border rounded py-2 px-3 bg-light">
-                    250
-                  </h5>
-                </div>
-                <div
-                  id="bidder"
-                  class="d-flex flex-row justify-content-between align-items-center border rounded shadow bg-secondary p-3 mb-2"
-                >
-                  <h4 class="card-subtitle">John Smith</h4>
-                  <h5 class="card-subtitle border rounded py-2 px-3 bg-light">
-                    250
-                  </h5>
+                <hr class="line-break" />
+                <div id="bid-history">
+                  <h3 class="card-subtitle my-3 bid-title">Bid History</h3>
+                  <h4 class="card-subtitle my-3 no-bids">
+                    No bids yet. Who will be the first?
+                  </h4>
                 </div>
               </div>
             </div>
@@ -251,8 +194,8 @@
       >
     </footer>
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

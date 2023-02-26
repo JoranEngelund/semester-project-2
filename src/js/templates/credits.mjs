@@ -13,6 +13,3 @@ export function displayCredits(credit) {
   anchor.innerText = `Credits: ${credit}`;
   creditsContainer.append(anchor);
 }
-
-const media = [];
-const media1 = media.push(formData.media1.value);

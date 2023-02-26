@@ -66,3 +66,8 @@ body {
   aspect-ratio: 1;
   border-radius: 50%;
 }
+
+.gallery {
+  height: 75vh;
+  object-fit: cover;
+}

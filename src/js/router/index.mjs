@@ -14,8 +14,8 @@ export function router() {
   console.log(path);
 
   if (path === "/" || path === "/index.html") {
-    run.setup();
     check.checkAuthorization();
+    run.setup();
   }
   if (path === "/authorization/login/index.html") {
     check.loginHandler();
@@ -24,21 +24,22 @@ export function router() {
     check.registrationHandler();
   }
   if (path === "/home/index.html") {
+    check.checkAuthorization();
     run.setup();
     write.welcomeMessage();
     upload.createListing();
     download.setupCredits();
     check.logout();
-    check.checkAuthorization();
   }
   if (path === "/profile/index.html") {
+    check.checkAuthorization();
     check.logout();
     download.setupCredits();
-    check.checkAuthorization();
   }
   if (path === "/home/auction/index.html") {
-    check.logout();
-    download.setupCredits();
     check.checkAuthorization();
+    check.logout();
+    run.setupSpecificListing();
+    download.setupCredits();
   }
 }

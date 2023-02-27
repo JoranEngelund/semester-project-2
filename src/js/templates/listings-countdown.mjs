@@ -19,7 +19,9 @@ export function allListingsCountdown(div, date) {
       div.querySelector(".listing-ends").innerText = `Ends in: ${days} Days`;
     }
     if (days < timeLeft && hours >= timeLeft) {
-      div.querySelector(".listing-ends").innerText = `Ends in: ${hours} Hours`;
+      div.querySelector(
+        ".listing-ends"
+      ).innerText = `Ends in: ${hours} Hours, ${minutes} Minutes`;
     }
     if (
       days < timeLeft &&

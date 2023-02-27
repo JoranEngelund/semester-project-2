@@ -1,3 +1,5 @@
+import { specificListingErrorHandler } from "../error-handlers/index.mjs";
+import * as check from "../response-handlers/index.mjs";
 import * as storage from "../storage/index.mjs";
 
 /**
@@ -21,8 +23,10 @@ export async function specificListing(url) {
         Authorization: `Bearer ${token}`,
       },
     });
+    check.specificListingsResponseHandler(response);
     return await response.json();
   } catch (error) {
     console.log(error);
+    specificListingErrorHandler(error);
   }
 }

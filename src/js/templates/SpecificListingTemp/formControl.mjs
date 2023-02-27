@@ -7,8 +7,6 @@ import * as storage from "../../storage/index.mjs";
 export function formControl(name) {
   const user = storage.load("user");
   const { name: username } = user;
-  console.log(username);
-  console.log(name);
   if (username === name) {
     document.querySelector(".bid-container").classList.add("d-none");
     document.querySelector(".line-break").classList.add("d-none");

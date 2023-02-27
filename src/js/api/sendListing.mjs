@@ -23,6 +23,9 @@ export async function sendListing(url, item, method) {
     if (response.ok) {
       window.location.reload();
     }
+    if (!response.ok) {
+      alert("The listing didn't get correctly created, please try again");
+    }
   } catch (error) {
     console.log(error);
     alert("The listing didn't get correctly created, please try again");

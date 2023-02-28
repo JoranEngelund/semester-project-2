@@ -38,12 +38,9 @@ export function sellerDetails(name, avatar, endsAt, bids) {
   div.querySelector("img").title = name;
   div.querySelector("h3").innerText = name;
   countDown(endsAt);
-  for (let i = 0; i < bids.length; i++) {
-    let lastBid = bids[i].amount;
-    if (bids.length >= 0) {
-      div.querySelector(".last-bid").innerText = `Highest bid: €${lastBid}`;
-    }
+  let highestBid = Math.max(...bids.map((winningBid) => winningBid.amount));
+  if (highestBid > 0) {
+    div.querySelector(".last-bid").innerText = `Highest bid: €${highestBid}`;
   }
-
   sellerContainer.append(div);
 }

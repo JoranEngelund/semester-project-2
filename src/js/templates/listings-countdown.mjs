@@ -16,12 +16,12 @@ export function allListingsCountdown(div, date) {
     const timeLeft = 1;
 
     if (days >= timeLeft) {
-      div.querySelector(".listing-ends").innerText = `Ends in: ${days} Days`;
+      div.querySelector(".listing-ends").innerText = `Ends in: ${days} Day(s)`;
     }
     if (days < timeLeft && hours >= timeLeft) {
       div.querySelector(
         ".listing-ends"
-      ).innerText = `Ends in: ${hours} Hours, ${minutes} Minutes`;
+      ).innerText = `Ends in: ${hours}h, ${minutes}m`;
     }
     if (
       days < timeLeft &&

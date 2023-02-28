@@ -18,25 +18,25 @@ export function countDown(date) {
     if (days >= timeLeft) {
       document.querySelector(
         ".bid-ends"
-      ).innerText = `Ends in: ${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+      ).innerText = `Ends in: ${days}d, ${hours}h, ${minutes}m, ${seconds}s`;
     }
 
     if (days >= timeLeft && hours < timeLeft) {
       document.querySelector(
         ".bid-ends"
-      ).innerText = `Ends in: ${days} Days, ${minutes} Minutes, ${seconds} Seconds`;
+      ).innerText = `Ends in: ${days}d, ${minutes}m, ${seconds}m`;
     }
 
     if (days < timeLeft && hours >= timeLeft) {
       document.querySelector(
         ".bid-ends"
-      ).innerText = `Ends in: ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+      ).innerText = `Ends in: ${hours}h, ${minutes}m, ${seconds}s`;
     }
 
     if (days < timeLeft && hours < timeLeft && minutes >= timeLeft) {
       document.querySelector(
         ".bid-ends"
-      ).innerText = `Ends in: ${minutes} Minutes, ${seconds} Seconds`;
+      ).innerText = `Ends in: ${minutes}m, ${seconds}s`;
     }
 
     if (

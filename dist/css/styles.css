@@ -13354,8 +13354,9 @@ body {
   border-radius: 50%;
 }
 
+.card-img-top,
 .gallery {
-  height: 75vh;
+  aspect-ratio: 5/4;
   object-fit: cover;
 }
 

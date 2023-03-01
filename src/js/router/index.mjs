@@ -34,7 +34,9 @@ export function router() {
   if (path === "/profile/index.html") {
     check.checkAuthorization();
     check.logout();
+    download.setupProfileInfo();
     download.setupCredits();
+    upload.createListing();
   }
   if (path === "/home/auction/index.html") {
     check.checkAuthorization();

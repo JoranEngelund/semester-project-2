@@ -31,12 +31,12 @@ export function allListingsCountdown(div, date) {
     ) {
       div.querySelector(
         ".listing-ends"
-      ).innerText = `Ends in: ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
+      ).innerText = `Ends in: ${hours}h, ${minutes}m, ${seconds}s`;
     }
     if (days < timeLeft && hours < timeLeft && minutes >= timeLeft) {
       div.querySelector(
         ".listing-ends"
-      ).innerText = `Ends in: ${minutes} Minutes, ${seconds} Seconds`;
+      ).innerText = `Ends in: ${minutes}m, ${seconds}s`;
     }
     if (
       days < timeLeft &&

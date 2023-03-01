@@ -1,6 +1,6 @@
 {
   "name": "semester-project-2",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Semester project 2 developing an IT auction house, utilizing HTML, CSS, SCSS, Bootstrap and JavaScript",
   "type": "module",
   "main": "index.js",

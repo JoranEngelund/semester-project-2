@@ -26,6 +26,7 @@ export function profileInfoTemplate(name, avatar, email, credits) {
                   <hr>`;
 
   div.querySelector("img").src = avatar;
+  div.querySelector("img").title = name;
   div.querySelector(".username").innerText = name;
   div.querySelector(".email").innerText = email;
   div.querySelector(".credits").innerText = `Credits: ${credits}`;

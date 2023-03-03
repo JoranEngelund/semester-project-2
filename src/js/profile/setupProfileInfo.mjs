@@ -1,8 +1,11 @@
 import { API_BASE_URL } from "../constants/constants.mjs";
 import * as storage from "../storage/index.mjs";
-import { profileInfo } from "../api/index.mjs";
+import { profileInfo, profileListings } from "../api/index.mjs";
 import { renderProfileInfo } from "./renderProfileInfo.mjs";
 import { editAvatarListener } from "../form-handlers/editAvatar.mjs";
+import { renderProfileListings } from "./renderProfileListings.mjs";
+import { toggleLoadingIndicator } from "../loader/loadingIndicator.mjs";
+import { profileListingsLengthChecker } from "../length-checkers/profileListings-lenghtChecker.mjs";
 
 /**
  * Sets up the user's profile information by loading the user's information from storage, fetching their profile information from the API, and rendering their profile information onto the webpage. Aswell calls the editAvatarListener function and passes in the name variable retrieved from localStorage as an argument to the function.
@@ -16,8 +19,19 @@ import { editAvatarListener } from "../form-handlers/editAvatar.mjs";
 export async function setupProfileInfo() {
   const user = storage.load("user");
   const { name } = user;
-  const API_PROFILE_URL = `${API_BASE_URL}/auction/profiles/${name}?_listings=true`;
+  const API_PROFILE_URL = `${API_BASE_URL}/auction/profiles/${name}`;
+  const API_AVATAR_URL = `${API_BASE_URL}/auction/profiles/${name}/media`;
+  const API_PROFILE_LISTING_URL = `${API_BASE_URL}/auction/profiles/${name}/listings`;
   const profile = await profileInfo(API_PROFILE_URL);
-  renderProfileInfo(profile);
-  editAvatarListener(name);
+  const profileItems = await profileListings(API_PROFILE_LISTING_URL);
+  try {
+    renderProfileInfo(profile);
+  } catch (error) {}
+  try {
+    renderProfileListings(profileItems);
+    profileListingsLengthChecker(profileItems);
+  } catch (error) {}
+
+  toggleLoadingIndicator(profileItems);
+  editAvatarListener(API_AVATAR_URL);
 }

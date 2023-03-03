@@ -4,3 +4,4 @@ export * from "./registration.mjs";
 export * from "./sendListing.mjs";
 export * from "./profileInfo.mjs";
 export * from "./editAvatar.mjs";
+export * from "./profileListings.mjs";

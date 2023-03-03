@@ -18,7 +18,7 @@ export function renderAllListings(listings) {
   listings.forEach(
     ({ title, created, endsAt, id, media, description, _count }) => {
       const { bids } = _count;
-      listingsTemplate(title, created, endsAt, id, media, description, bids);
+      listingsTemplate(title, endsAt, id, media, description, bids);
     }
   );
 }

@@ -178,40 +178,6 @@
                   <div
                     class="d-flex flex-row flex-wrap justify-content-evenly align-items-center ms-2 me-4 my-2 gap-4"
                   >
-                    <div class="dropdown-left border rounded border-primary">
-                      <button
-                        class="btn btn-secondary shadow dropdown-toggle"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        Tags
-                      </button>
-                      <ul class="dropdown-menu border border-primary rounded">
-                        <li><a class="dropdown-item" href="#">Item 1</a></li>
-                        <li><a class="dropdown-item" href="#">Item 2</a></li>
-                        <li><a class="dropdown-item" href="#">Item 3</a></li>
-                        <li><a class="dropdown-item" href="#">Item 4</a></li>
-                      </ul>
-                    </div>
-                    <div class="dropdown-left border rounded border-primary">
-                      <button
-                        class="btn btn-secondary border-1 border-primary shadow dropdown-toggle"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        Sort Listings
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a class="dropdown-item" href="#">Newest Listings</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#">Oldest Listings</a>
-                        </li>
-                      </ul>
-                    </div>
                     <form class="d-flex shadow" role="search">
                       <input
                         id="search-bar"
@@ -225,7 +191,14 @@
                 </div>
                 <section id="auction-listing">
                   <div class="container-fluid">
-                    <div id="listing-container" class="row"></div>
+                    <div id="listing-container" class="row">
+                      <div
+                        class="spinner-border text-primary toggleLoadingIndicator"
+                        role="status"
+                      >
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
                   </div>
                 </section>
               </div>

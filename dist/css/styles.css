@@ -13360,4 +13360,17 @@ body {
   object-fit: cover;
 }
 
+.spinner-border {
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-width: 0.7em;
+  z-index: 2;
+  margin: auto;
+}
+
 /*# sourceMappingURL=styles.css.map */

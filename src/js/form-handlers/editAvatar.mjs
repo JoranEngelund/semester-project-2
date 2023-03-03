@@ -33,8 +33,7 @@ const method = "PUT";
 editAvatar(API_AVATAR_URL, body, method);
 ```
  */
-export function editAvatarListener(name) {
-  const API_AVATAR_URL = `${API_BASE_URL}/auction/profiles/${name}/media`;
+export function editAvatarListener(url) {
   const form = document.querySelector("#update-profile-media");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -44,6 +43,6 @@ export function editAvatarListener(name) {
     const body = {
       avatar: avatar,
     };
-    editAvatar(API_AVATAR_URL, body, method);
+    editAvatar(url, body, method);
   });
 }

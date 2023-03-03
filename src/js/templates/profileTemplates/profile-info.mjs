@@ -9,7 +9,7 @@ import { placeholderAvatar } from "../../error-handlers/onerror.mjs";
  * @param {number} credits - The number of credits the user has.
  * @returns {void} - This function does not return anything, but renders the user's profile information onto the webpage using a pre-defined HTML template
  */
-export function profileInfoTemplate(name, avatar, email, credits) {
+export function profileInfoTemplate(name, avatar, email, credits, listings) {
   const profileInfoContainer = document.querySelector(".profile-info");
   const div = document.createElement("div");
 
@@ -30,5 +30,9 @@ export function profileInfoTemplate(name, avatar, email, credits) {
   div.querySelector(".username").innerText = name;
   div.querySelector(".email").innerText = email;
   div.querySelector(".credits").innerText = `Credits: ${credits}`;
+  document.querySelector(
+    ".my-listings-title"
+  ).innerText = `My Listings (${listings})`;
+
   profileInfoContainer.append(div);
 }

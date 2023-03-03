@@ -14,9 +14,7 @@ import { profileInfoTemplate } from "../templates/profileTemplates/profile-info.
  * @returns {void} - This function does not return anything, but renders the user's profile information onto the webpage.
  */
 export function renderProfileInfo(profile) {
-  const { name, avatar, email, credits, listings, _count } = profile;
-  const { listings: numberOfListings } = _count;
-  console.log(numberOfListings);
-  listings.forEach(({ endsAt, id, media, title, description }) => {});
-  profileInfoTemplate(name, avatar, email, credits);
+  const { name, avatar, email, credits, _count } = profile;
+  const { listings } = _count;
+  profileInfoTemplate(name, avatar, email, credits, listings);
 }

@@ -1,11 +1,12 @@
 {
   "name": "semester-project-2",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Semester project 2 developing an IT auction house, utilizing HTML, CSS, SCSS, Bootstrap and JavaScript",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css & live-server",
     "prepare": "husky install"
   },
   "repository": {
@@ -24,6 +25,8 @@
     "css",
     "scss",
     "html",
+    "bootstrap",
+    "sass",
     "Noroff"
   ],
   "author": "Joran Engelund <joranengelund@hotmail.com>",
@@ -33,9 +36,12 @@
   },
   "homepage": "https://github.com/JoranEngelund/semester-project-2#readme",
   "devDependencies": {
+    "bootstrap": "^5.2.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
-    "prettier": "^2.8.3"
+    "live-server": "^1.2.2",
+    "prettier": "^2.8.3",
+    "sass": "^1.58.0"
   },
   "lint-staged": {
     "*.js": [

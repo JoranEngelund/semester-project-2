@@ -1,0 +1,87 @@
+// Custom scss
+@import "../../node_modules/bootstrap/scss/functions";
+@import "./partials/nav";
+@import "./partials/btn";
+@import "./partials/card";
+@import "./partials/variables";
+
+// Original Bootstrap scss files
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.img-logo {
+  max-width: 60%;
+}
+
+footer a,
+.card a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Catamaran", sans-serif;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: $dark;
+}
+
+.icon-custom {
+  aspect-ratio: 3;
+}
+
+.card-width {
+  width: 97vw;
+}
+
+.custom-title {
+  font-size: 1.2rem;
+}
+
+.form-control {
+  background-color: $secondary;
+  width: 100%;
+  max-width: 17rem;
+  border: none;
+  border-radius: 0.2rem;
+  box-shadow: $inset-box-shadow;
+
+  &:focus {
+    background-color: $secondary;
+    box-shadow: $inset-box-shadow;
+  }
+
+  &.post-input {
+    max-width: 19rem;
+    box-shadow: $inset-box-shadow;
+  }
+}
+
+.card-img {
+  max-width: 20%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.card-img-top,
+.gallery {
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+}
+
+.spinner-border {
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-width: 0.7em;
+  z-index: 2;
+  margin: auto;
+}

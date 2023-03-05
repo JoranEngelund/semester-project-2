@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="View specific listing, view bid history, highest bid, deadline and bid on the item. Bid smarter, not harder, with BIDIT"
+    />
+    <meta
+      name="keywords"
+      content="Browse, account, bid, auction, house, online, bidding, bid, biddit, listing, buy"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <title>Auction | BIDIT</title>
+  </head>
+  <body class="bg-secondary d-flex flex-column min-vh-100">
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-md shadow bg-light">
+        <div class="container-fluid">
+          <a href="/home/index.html" class="navbar-brand"
+            ><img src="/assets/Logo.png" alt="logo of BIDIT" class="img-logo"
+          /></a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  href="/home/index.html"
+                  class="nav-link rounded py-1 px-3 mx-2"
+                  >Auction</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="/profile/index.html"
+                  class="nav-link rounded py-1 px-3 mx-2"
+                  >Profile</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="../index.html"
+                  class="nav-link rounded py-1 px-3 mx-2 logout"
+                  >Logout</a
+                >
+              </li>
+              <li class="nav-item credits"></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="container-fluid specific-listings">
+          <div
+            class="spinner-border text-primary toggleLoadingIndicator"
+            role="status"
+          >
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="row mt-6">
+            <div
+              class="col-md-6 col-sm-12 d-flex align-items-center flex-column"
+            >
+              <div class="card rounded bg-light shadow">
+                <div
+                  id="gallery-carousel"
+                  class="carousel slide"
+                  data-bs-ride="true"
+                >
+                  <div class="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#gallery-carousel"
+                      data-bs-slide-to="0"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#gallery-carousel"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#gallery-carousel"
+                      data-bs-slide-to="2"
+                      aria-label="Slide 3"
+                    ></button>
+                  </div>
+                  <div class="carousel-inner"></div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#gallery-carousel"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#gallery-carousel"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <div class="card-body listing-details"></div>
+              </div>
+              <a
+                href="/home/index.html"
+                class="btn btn-primary shadow my-3 px-7"
+              >
+                See Other Listings
+              </a>
+            </div>
+            <div class="col-md-6 col-sm-12 mb-3">
+              <div class="card bg-light shadow rounded p-3">
+                <div class="seller-details"></div>
+                <div class="d-flex justify-content-between mb-3 bid-container">
+                  <label for="bid" class="card-subtitle fs-4 fw-bold"
+                    >Your Bid:
+                  </label>
+                  <form
+                    method="POST"
+                    action=""
+                    id="bid-form"
+                    class="d-flex flex-column"
+                  >
+                    <input
+                      class="form-control"
+                      name="bid"
+                      id="bid"
+                      type="number"
+                      max="1000"
+                      placeholder="100"
+                      required
+                    />
+                    <button
+                      type="submit"
+                      class="btn btn-primary shadow bid-btn mt-2"
+                    >
+                      Bid It
+                    </button>
+                  </form>
+                </div>
+                <hr class="line-break" />
+                <div id="bid-history">
+                  <h3 class="card-subtitle my-3 bid-title">Bid History</h3>
+                  <h4 class="card-subtitle my-3 no-bids">
+                    No bids yet. Who will be the first?
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-primary mt-auto text-center text-light p-3">
+      <a
+        target="_blank"
+        href="https://joranengelund.github.io/"
+        class="nav-item text-light"
+        >Copyright © 2023 Jøran Engelund</a
+      >
+    </footer>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/js/index.mjs" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="login to get started. Bid smarter, not harder, with BIDIT"
+    />
+    <meta
+      name="keywords"
+      content="login, account, bid, auction, house, online, bidding, bid, biddit, listing"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <title>Login | BIDIT</title>
+  </head>
+  <body class="bg-secondary d-flex flex-column min-vh-100">
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-md shadow bg-light">
+        <div class="container-fluid">
+          <a href="../../index.html" class="navbar-brand"
+            ><img src="/assets/Logo.png" alt="logo of BIDIT" class="img-logo"
+          /></a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  href="../registration/index.html"
+                  class="nav-link bg-primary text-light rounded py-1 px-3 mx-2 shadow"
+                  >Sign up</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="login mt-4 mb-2">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+              <div class="card shadow">
+                <div class="card-body" id="login-card">
+                  <h1 class="card-title mt-3">Login</h1>
+                  <form
+                    method="POST"
+                    id="login-form"
+                    class="text-start d-flex flex-column align-items-center mt-5"
+                  >
+                    <div class="mb-3 mx-6">
+                      <label for="email" class="form-label">Email *</label>
+                      <input
+                        name="email"
+                        type="email"
+                        id="email"
+                        class="form-control"
+                        placeholder="Email@Address.com"
+                        pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                        required
+                        title="Email address must contain @stud.noroff.no / @noroff.no | Cannot contain (Æ, Ø, Å) | Example: email_address@noroff.no / email-address@stud.noroff.no / email.address@noroff.no"
+                      />
+                    </div>
+                    <div class="mb-3 mx-6">
+                      <label for="password" class="form-label"
+                        >Password *</label
+                      >
+                      <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="form-control"
+                        placeholder="********"
+                        required
+                        minlength="8"
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn btn-primary mt-4 mb-3 px-8 shadow text-uppercase btn-login"
+                    >
+                      login
+                    </button>
+                    <div class="card-text mb-5">
+                      Not registered?
+                      <a
+                        class="text-decoration-underline"
+                        href="../registration/index.html"
+                        >Create an account</a
+                      >
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-primary mt-auto text-center text-light p-3">
+      <a
+        target="_blank"
+        href="https://joranengelund.github.io/"
+        class="nav-item text-light"
+        >Copyright © 2023 Jøran Engelund</a
+      >
+    </footer>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../src/js/index.mjs" type="module"></script>
+  </body>
+</html>

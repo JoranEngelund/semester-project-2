@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse, Search on auction listings, login or register to get started. Bid smarter, not harder, with BIDIT"
+    />
+    <meta
+      name="keywords"
+      content="Browse, account, login, signup, bid, auction, house, online, bidding, bid, biddit, listing, search, sell, buy"
+    />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <title>Home | BIDIT</title>
+  </head>
+  <body class="bg-secondary d-flex flex-column min-vh-100">
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-md shadow bg-light">
+        <div class="container-fluid">
+          <a href="index.html" class="navbar-brand"
+            ><img src="/assets/Logo.png" alt="logo of BIDIT" class="img-logo"
+          /></a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  href="/authorization/login/index.html"
+                  class="nav-link rounded py-1 px-3 mx-2"
+                  >Login</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="/authorization/registration/index.html"
+                  class="nav-link bg-primary text-light rounded py-1 px-3 mx-2 shadow"
+                  >Sign up</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-12 d-flex flex-column justify-content-center align-items-center my-6"
+            >
+              <div class="text-center">
+                <img src="/assets/icon-no-text.svg" alt="logo of BIDIT" />
+                <h1 class="text-primary">
+                  "Bid smarter, not harder, with BIDIT"
+                </h1>
+              </div>
+              <a
+                href="/authorization/registration/index.html"
+                class="btn btn-primary text-light shadow px-6 py-2 mt-3"
+              >
+                Get started
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="row">
+            <div
+              class="col d-flex flex-column justify-content-center align-items-center"
+            >
+              <div class="card bg-light shadow border-none rounded card-width">
+                <h2 class="card-title text-center my-5">How It Works</h2>
+                <div
+                  class="card-body d-flex justify-content-evenly align-items-center flex-wrap"
+                >
+                  <div class="text-center my-3 mx-6">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#find-it"
+                      class="border-0 bg-transparent"
+                    >
+                      <img
+                        class="bg-primary rounded-circle p-3"
+                        src="/assets/Icon material-search.svg"
+                        alt="searching icon"
+                      />
+                    </button>
+                    <div class="my-3">
+                      <h3>Find It</h3>
+                      <p class="card-text">
+                        Search, browse and find auctioned IT products
+                      </p>
+                    </div>
+                  </div>
+                  <div class="text-center my-3 mx-6">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#bid-it"
+                      class="border-0 bg-transparent"
+                    >
+                      <img
+                        class="bg-primary rounded-circle p-3"
+                        src="/assets/Icon metro-hammer.svg"
+                        alt="hammer icon"
+                      />
+                    </button>
+                    <div class="my-3">
+                      <h3>Bid It</h3>
+                      <p class="card-text">Bid on listings at auction prices</p>
+                    </div>
+                  </div>
+                  <div class="text-center my-3 mx-6">
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#list-it"
+                      class="border-0 bg-transparent"
+                    >
+                      <img
+                        class="bg-primary rounded-circle p-3 icon-custom"
+                        src="/assets/Icon awesome-hand-holding-usd.svg"
+                        alt="dollar icon"
+                      />
+                    </button>
+                    <div class="my-3">
+                      <h3>List It</h3>
+                      <p class="card-text">
+                        List and get bids on your auction items
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container my-4">
+          <div class="row">
+            <div
+              class="col d-flex flex-column justify-content-center align-items-center"
+            >
+              <div class="card bg-light shadow border-none rounded card-width">
+                <div
+                  class="d-flex flex-row flex-wrap justify-content-between align-items-center"
+                >
+                  <h2 class="card-title m-4 text-dark">Auction Items</h2>
+                  <div
+                    class="d-flex flex-row flex-wrap justify-content-evenly align-items-center ms-2 me-4 my-2 gap-4"
+                  >
+                    <form class="d-flex shadow" role="search">
+                      <input
+                        id="search-bar"
+                        type="search"
+                        class="form-control search-bar ps-4 navbar-dark border border-primary bg-secondary text-dark"
+                        placeholder="Search..."
+                        aria-label="search"
+                      />
+                    </form>
+                  </div>
+                </div>
+                <section id="auction-listing">
+                  <div class="container-fluid">
+                    <div id="listing-container" class="row">
+                      <div
+                        class="spinner-border text-primary toggleLoadingIndicator"
+                        role="status"
+                      >
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="find-it-works">
+        <div
+          class="modal fade"
+          id="find-it"
+          tabindex="-1"
+          aria-labelledby="find-it"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content bg-secondary">
+              <div class="d-flex mx-3 mt-3 d-flex justify-content-end">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div
+                class="modal-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <div>
+                  <img
+                    class="bg-primary rounded-circle p-3"
+                    src="/assets/Icon awesome-hand-holding-usd.svg"
+                    alt="dollar icon"
+                  />
+                </div>
+                <h2 class="my-4">How Find It Works</h2>
+                <ul class="my-4 text-dark">
+                  <li>You can search on auction items titles</li>
+                  <li>You can browse the list of auction items</li>
+                </ul>
+                <button
+                  type="button"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  class="btn btn-primary rounded shadow text-light py-2 px-4"
+                >
+                  Got It
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="bid-it-works">
+        <div
+          class="modal fade"
+          id="bid-it"
+          tabindex="-1"
+          aria-labelledby="bid-it"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content bg-secondary">
+              <div class="d-flex mx-3 mt-3 d-flex justify-content-end">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div
+                class="modal-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <div>
+                  <img
+                    class="bg-primary rounded-circle p-3"
+                    src="/assets/Icon metro-hammer.svg"
+                    alt="hammer icon"
+                  />
+                </div>
+                <h2 class="my-4">How Bid It Works</h2>
+                <ul class="my-4 text-dark">
+                  <li>You can view specific items listed for auction</li>
+                  <li>You can view how many bids the listed item has</li>
+                  <li>You can view the highest bid on the listed item</li>
+                  <li>You can bid a desired amount of credits on the item</li>
+                  <li>You can view when the auction ends</li>
+                </ul>
+                <button
+                  type="button"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  class="btn btn-primary rounded shadow text-light py-2 px-4"
+                >
+                  Got It
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="list-it-works">
+        <div
+          class="modal fade"
+          id="list-it"
+          tabindex="-1"
+          aria-labelledby="list-it"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content bg-secondary">
+              <div class="d-flex mx-3 mt-3 d-flex justify-content-end">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div
+                class="modal-body d-flex flex-column justify-content-center align-items-center"
+              >
+                <div>
+                  <img
+                    class="bg-primary rounded-circle p-3"
+                    src="/assets/Icon awesome-hand-holding-usd.svg"
+                    alt="dollar icon"
+                  />
+                </div>
+                <h2 class="my-4">How List It Works</h2>
+                <ul class="my-4 text-dark">
+                  <li>You can add listing title and description of the item</li>
+                  <li>
+                    You can set the when the listing ends with date and hours
+                  </li>
+                  <li>You can add media gallery with up to 3 images</li>
+                  <li>
+                    You can add desired tags that corresponds with the item
+                  </li>
+                </ul>
+                <button
+                  type="button"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  class="btn btn-primary rounded shadow text-light py-2 px-4"
+                >
+                  Got It
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-primary mt-auto text-center text-light p-3">
+      <a
+        target="_blank"
+        href="https://joranengelund.github.io/"
+        class="nav-item text-light"
+        >Copyright © 2023 Jøran Engelund</a
+      >
+    </footer>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/src/js/index.mjs" type="module"></script>
+  </body>
+</html>

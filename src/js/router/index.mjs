@@ -11,7 +11,6 @@ import * as download from "../profile/index.mjs";
  */
 export function router() {
   const path = window.location.pathname;
-  console.log(path);
 
   if (path === "/" || path === "/index.html") {
     check.checkAuthorization();

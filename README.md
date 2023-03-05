@@ -1,4 +1,4 @@
-# BIDDIT
+# BIDIT
 
 ![Skjermbilde 2023-03-05 161620](https://user-images.githubusercontent.com/56642663/222969385-5c4d893d-2d46-4425-aa10-6ee98aed8931.png)
 

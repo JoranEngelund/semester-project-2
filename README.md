@@ -1,5 +1,8 @@
 # BIDIT
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6fdc83d0-3151-477c-93b7-020b55bd6f60/deploy-status)](https://app.netlify.com/sites/bid-it/deploys)
+[BIDIT](https://bid-it.netlify.app/index.html)
+
 ![Skjermbilde 2023-03-05 161620](https://user-images.githubusercontent.com/56642663/222969385-5c4d893d-2d46-4425-aa10-6ee98aed8931.png)
 
 ## Description
